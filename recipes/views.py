@@ -11,7 +11,6 @@ from .models import Recipe
 
 RECIPES_PER_PAGE = 5
 
-@login_required
 def recipe_list(request):
     recipes = Recipe.objects.order_by("title")
     paginator = Paginator(recipes, RECIPES_PER_PAGE)
