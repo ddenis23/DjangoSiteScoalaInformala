@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ action }} reteta{% endblock %}
+
+{% block content %}
+
+  <h1>{{ action }} reteta</h1>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">{{ action }}</button>
+    {% if recipe %}
+      <a href="{% url 'recipe_detail' recipe.pk %}" class="btn btn-secondary">Anuleaza</a>
+    {% else %}
+      <a href="{% url 'recipe_list' %}" class="btn btn-secondary">Anuleaza</a>
+    {% endif %}
+  </form>
+
+{% endblock %}

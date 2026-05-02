@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Sterge imaginea{% endblock %}
+
+{% block content %}
+
+  <div class="row justify-content-center">
+    <div class="col-md-5 text-center">
+      <h1 class="mb-3">Sterge imaginea</h1>
+      <p class="lead">Esti sigur ca vrei sa stergi imaginea retetei <strong>"{{ recipe.title }}"</strong>?</p>
+      <p class="text-danger">Aceasta actiune este ireversibila.</p>
+      <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Da, sterge</button>
+        <a href="{% url 'recipe_detail' recipe.pk %}" class="btn btn-secondary">Anuleaza</a>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+/* Stiluri personalizate - Bootstrap se ocupa de restul */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+}
+
+.card {
+    border-left: 4px solid #1a3a5c;
+}
+
+/* Override culoare Bootstrap success → bleumarin */
+.bg-success {
+    background-color: #1a3a5c !important;
+}
+
+.btn-success {
+    background-color: #1a3a5c !important;
+    border-color: #1a3a5c !important;
+}
+
+.btn-success:hover {
+    background-color: #152d48 !important;
+    border-color: #152d48 !important;
+}
+
+.btn-outline-success {
+    color: #1a3a5c !important;
+    border-color: #1a3a5c !important;
+}
+
+.btn-outline-success:hover {
+    background-color: #1a3a5c !important;
+    color: #fff !important;
+}
+
+.text-success {
+    color: #1a3a5c !important;
+}
